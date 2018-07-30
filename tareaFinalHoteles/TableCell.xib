@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="17F77" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="152" id="KGk-i7-Jjw" customClass="TableCell" customModule="tareaFinalHoteles" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="152"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="360" height="151.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QCK-0K-Go3">
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="151.5"/>
+                    </imageView>
+                    <view alpha="0.54000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKV-Qq-yzp">
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="151.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fl9-gI-zFW">
+                        <rect key="frame" x="8" y="61.5" width="344" height="30.5"/>
+                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                        <color key="textColor" red="0.99555837560000005" green="0.99555837560000005" blue="0.99555837560000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Fl9-gI-zFW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="4iL-T8-zx1"/>
+                    <constraint firstItem="Fl9-gI-zFW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7qX-Bw-Tbv"/>
+                    <constraint firstItem="QCK-0K-Go3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Bo8-ek-P5D"/>
+                    <constraint firstAttribute="bottom" secondItem="sKV-Qq-yzp" secondAttribute="bottom" id="ODZ-1K-bZv"/>
+                    <constraint firstAttribute="trailing" secondItem="sKV-Qq-yzp" secondAttribute="trailing" id="Ohc-LB-YPg"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Fl9-gI-zFW" secondAttribute="trailing" id="TbI-1r-k40"/>
+                    <constraint firstItem="sKV-Qq-yzp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ZPD-BV-6NQ"/>
+                    <constraint firstAttribute="trailing" secondItem="QCK-0K-Go3" secondAttribute="trailing" id="aA1-BD-k2t"/>
+                    <constraint firstAttribute="bottom" secondItem="QCK-0K-Go3" secondAttribute="bottom" id="fP7-ps-ErC"/>
+                    <constraint firstItem="QCK-0K-Go3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hiV-Ha-hPu"/>
+                    <constraint firstItem="Fl9-gI-zFW" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="uwt-mw-vcw"/>
+                    <constraint firstItem="sKV-Qq-yzp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xqa-nA-UsS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="hotelLabel" destination="Fl9-gI-zFW" id="G65-4B-nPc"/>
+                <outlet property="tableImage" destination="QCK-0K-Go3" id="OC4-MI-qka"/>
+            </connections>
+            <point key="canvasLocation" x="-52" y="-69"/>
+        </tableViewCell>
+    </objects>
+</document>

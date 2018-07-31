@@ -23,7 +23,6 @@ class DetailController: UIViewController,UICollectionViewDelegate, UICollectionV
     
     var hotelDesc = ""
     
-    var withConst = NSLayoutConstraint(item: CollectionViewCell(), attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 300)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,19 +40,13 @@ class DetailController: UIViewController,UICollectionViewDelegate, UICollectionV
         let cell = myCollection.dequeueReusableCell(withReuseIdentifier: "cellCollection", for: indexPath) as! CollectionViewCell
         cell.cellImage.image = UIImage(named: array[indexPath.item])
         
-        if UIDevice.current.orientation.isLandscape{
-            cell.cellImage.contentMode = .scaleAspectFill
-        }
-        else if UIDevice.current.orientation.isPortrait{
-            cell.cellImage.contentMode = .scaleToFill
-        }
-        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = CGSize(width: myCollection.frame.size.width, height: 280)
-        return size
+        
+        let with = myCollection.frame.size.width
+        return CGSize(width: with, height: 280)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat{
         return 0
@@ -91,5 +84,20 @@ class DetailController: UIViewController,UICollectionViewDelegate, UICollectionV
         let cell = myCollection.visibleCells.first
         pages.currentPage = (myCollection.indexPath(for: cell!)?.row)!
     }
-
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        if UIDevice.current.orientation.isLandscape,
+            let layout = myCollection.collectionViewLayout as? UICollectionViewFlowLayout{
+            let with = myCollection.frame.size.width
+            layout.itemSize = CGSize(width: with, height: 280)
+            layout.invalidateLayout()
+        }
+        
+        else if UIDevice.current.orientation.isLandscape,
+            let layout = myCollection.collectionViewLayout as? UICollectionViewFlowLayout{
+            let with = myCollection.frame.size.width
+            layout.itemSize = CGSize(width: with/2, height: 280)
+            
+        }
+    }
 }

@@ -64,19 +64,43 @@
 		6AA870A321052CDC00DA7965 /* tareaFinalHoteles */ = {
 			isa = PBXGroup;
 			children = (
+				6AE1A643210EC91B006B8E4C /* Views */,
+				6AE1A642210EC8E4006B8E4C /* Model */,
+				6AE1A641210EC8A6006B8E4C /* Controllers */,
+				6AA870AB21052CDC00DA7965 /* Assets.xcassets */,
+				6AA870B021052CDC00DA7965 /* Info.plist */,
+			);
+			path = tareaFinalHoteles;
+			sourceTree = "<group>";
+		};
+		6AE1A641210EC8A6006B8E4C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				6AA870A421052CDC00DA7965 /* AppDelegate.swift */,
 				6AA870A621052CDC00DA7965 /* ViewController.swift */,
 				6AF3D3D821054411003BE70A /* DetailController.swift */,
 				6AA870B621052F1700DA7965 /* TableCell.swift */,
 				6A014759210E7779005D66A9 /* CollectionViewCell.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6AE1A642210EC8E4006B8E4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6AF3D3D6210536F5003BE70A /* Data.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6AE1A643210EC91B006B8E4C /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				6AA870A821052CDC00DA7965 /* Main.storyboard */,
 				6AA870B721052F1700DA7965 /* TableCell.xib */,
-				6AA870AB21052CDC00DA7965 /* Assets.xcassets */,
 				6AA870AD21052CDC00DA7965 /* LaunchScreen.storyboard */,
-				6AF3D3D6210536F5003BE70A /* Data.swift */,
-				6AA870B021052CDC00DA7965 /* Info.plist */,
 			);
-			path = tareaFinalHoteles;
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
